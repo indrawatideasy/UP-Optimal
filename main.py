@@ -12,9 +12,10 @@ Aplikasi Prediksi Nilai UP Optimal Satker Lingkup Kanwil DJPB Sumsel
 
 #Sidebar
 st.sidebar.header('Masukkan Parameter')
+st.sidebar.number_input('Insert a number')
 
 def user_input_features():
-    sepal_length = st.number_input('Insert a number')
+    sepal_length = 
     data = {'sepal_length': sepal_length,
             }
     features = pd.DataFrame(data, index=[0])
