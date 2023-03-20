@@ -8,6 +8,9 @@ from sklearn.model_selection import train_test_split
 #import the data
 data = pd.read_csv("https://raw.githubusercontent.com/indrawatideasy/profil-pemda/main/pengelolaangup.csv")
 
+#Change numerical data to integer
+data = data.astype(int)
+
 #Apps Title
 st.write("""
 # UP OPTIMA
@@ -27,9 +30,6 @@ nilai_real53 = st.number_input('REAL53')
 X = data.drop('REALGUP', axis = 1)
 y = data['REALGUP']
 X_train, X_test, y_train, y_test = train_test_split(X,y,test_size=.2, random_state=45)
-
-#Change numerical data to number
-data = data.astype(str)
 
 #modelling step
 #import your model
