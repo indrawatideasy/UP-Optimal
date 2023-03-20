@@ -1,8 +1,8 @@
 #import libraries
 import streamlit as st
 import pandas as pd
+import xgboost as xgb
 from sklearn import datasets
-from sklearn.ensemble import RandomForestClassifier
 
 #Apps Title
 st.write("""
