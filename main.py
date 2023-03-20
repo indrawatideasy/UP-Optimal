@@ -34,7 +34,11 @@ def user_input_features():
     data = {'UP': nilai_up,
             'PAGU': nilai_pagu,
             'REALISASI': nilai_realisasi,
-            'PAGU52': nilai_pagu52}
+            'PAGU52': nilai_pagu52
+            'REAL52': nilai_real52,
+            'PAGU53': nilai_pagu53,
+            'REAL53': nilai_real53,
+            'STATUS': nilai_status}
     features = pd.DataFrame(data, index=[0])
     return features
     
