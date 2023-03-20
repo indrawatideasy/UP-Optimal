@@ -4,6 +4,13 @@ import pandas as pd
 import xgboost as xgb
 from sklearn import datasets
 
+#Loading up the Regression model we created
+model = xgb.XGBRegressor()
+model.load_model('xgb_model.json')
+
+#Caching the model for faster loading
+@st.cache
+
 #Apps Title
 st.write("""
 # UP OPTIMA
