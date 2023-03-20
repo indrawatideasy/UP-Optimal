@@ -36,6 +36,7 @@ model.predict(X_test)
 errors = np.sqrt(mean_squared_error(y_test,model.predict(X_test)))
 predictions = model.predict([[sqft_liv,bath,bed,floor]])[0]
 
-if st.button('Prediksi Realisasi GUP'):
-    realgup = predict(UP, PAGU, REALISASI, PAGU52, REAL52, PAGU53, REAL53, STATUS)
-    st.success(f'Prediksi nilai GUP yaitu sebesar Rp{realgup[0]:.2f} ')
+#checking prediction 
+if st.button("Prediksi"):
+    st.header("Prediksi Realisasi GUP yaitu Rp {}".format(int(predictions)))
+    st.subheader("Rentang prediksi nilai realisasi GUP yaitu Rp {} - Rp {}".format(int(predictions-errors),int(predictions+errors) ))
