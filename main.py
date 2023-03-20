@@ -10,9 +10,9 @@ st.write("""
 
 #Sidebar
 st.sidebar.header('User Input Parameters')
+st.number_input('masukkan nilai UP')
 
 def user_input_features():
-    nilai_up = st.number_input('masukkan nilai UP')
     sepal_width = st.sidebar.slider('Sepal width', 2.0, 4.4, 3.4)
     petal_length = st.sidebar.slider('Petal length', 1.0, 6.9, 1.3)
     petal_width = st.sidebar.slider('Petal width', 0.1, 2.5, 0.2)
@@ -29,7 +29,6 @@ df = user_input_features()
 #Subheader
 st.subheader('User Input parameters')
 st.write(df)
-st.write('nilai UP ', number)
 
 iris = datasets.load_iris()
 X = iris.data
