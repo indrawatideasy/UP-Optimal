@@ -41,5 +41,5 @@ predictions = [round(value) for value in y_pred]
 
 #checking prediction 
 if st.button("Prediksi"):
-    st.header("Prediksi Realisasi GUP yaitu Rp {}".format(int(predictions)))
-    st.subheader("Rentang prediksi nilai realisasi GUP yaitu Rp {} - Rp {}".format(int(predictions-errors),int(predictions+errors) ))
+    st.header("Prediksi Realisasi GUP yaitu Rp" {}.format(int(predictions)))
+    st.subheader("Rentang prediksi nilai realisasi GUP yaitu" Rp {} "-" Rp {}.format(int(predictions-errors),int(predictions+errors) ))
