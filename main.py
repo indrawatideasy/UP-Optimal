@@ -40,3 +40,7 @@ df = user_input_features()
 #Subheader
 st.subheader('Hasil Masukan Parameter')
 st.write(df)
+
+#st.write(prediction)
+st.subheader('Prediction')
+st.write(iris.target_names[predictions])
