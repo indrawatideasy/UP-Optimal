@@ -15,7 +15,7 @@ Aplikasi Prediksi Nilai UP Optimal Satker Lingkup Kanwil DJPB Sumsel
 """)
 
 #input the numbers
-nilai_up = st.number_input(int(data.UP.mean()))
+nilai_up = st.number_input("What is your square feet of living room?",int(data.sqft_living.min()),int(data.sqft_living.max()),int(data.sqft_living.mean()))
 nilai_pagu = st.number_input(int(data.PAGU.mean()))
 nilai_real = st.number_input(int(data.REALISASI.mean()))
 nilai_pagu52 = st.number_input(int(data.PAGU52.mean()))
