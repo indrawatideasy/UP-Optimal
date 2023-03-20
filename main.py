@@ -34,7 +34,7 @@ model = xgb.XGBRegressor()
 model.fit(X_train, y_train)
 model.predict(X_test)
 errors = np.sqrt(mean_squared_error(y_test,model.predict(X_test)))
-predictions = model.predict([[sqft_liv,bath,bed,floor]])[0]
+predictions = model.predict([[nilai_up, nilai_pagu, nilai_real, nilai_pagu52, nilai_real52, nilai_pagu53, nilai_real53]])[0]
 
 #checking prediction 
 if st.button("Prediksi"):
