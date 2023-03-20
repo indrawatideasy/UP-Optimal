@@ -12,11 +12,12 @@ st.write("""
 st.sidebar.header('User Input Parameters')
 
 def user_input_features():
-    UP = st.number_input('masukkan nilai UP')
+    nilai_up = st.number_input('masukkan nilai UP')
     sepal_width = st.sidebar.slider('Sepal width', 2.0, 4.4, 3.4)
     petal_length = st.sidebar.slider('Petal length', 1.0, 6.9, 1.3)
     petal_width = st.sidebar.slider('Petal width', 0.1, 2.5, 0.2)
-    data = {'sepal_width': sepal_width,
+    data = {'nilai_up': nilai_up,
+            'sepal_width': sepal_width,
             'petal_length': petal_length,
             'petal_width': petal_width}
     features = pd.DataFrame(data, index=[0])
