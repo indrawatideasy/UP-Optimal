@@ -40,17 +40,3 @@ df = user_input_features()
 #Subheader
 st.subheader('Hasil Masukan Parameter')
 st.write(df)
-
-iris = datasets.load_iris()
-X = iris.data
-Y = iris.target
-
-clf = RandomForestClassifier()
-clf.fit(X, Y)
-
-prediction = clf.predict(df)
-prediction_proba = clf.predict_proba(df)
-
-st.subheader('Prediksi Realisasi GUP')
-st.write(iris.target_names[prediction])
-#st.write(prediction)
