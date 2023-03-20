@@ -28,6 +28,9 @@ X = data.drop('REALGUP', axis = 1)
 y = data['REALGUP']
 X_train, X_test, y_train, y_test = train_test_split(X,y,test_size=.2, random_state=45)
 
+#Change numerical data to number
+data = data.astype(str)
+
 #modelling step
 #import your model
 model = xgb.XGBRegressor()
