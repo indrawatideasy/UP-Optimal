@@ -28,6 +28,7 @@ df = user_input_features()
 
 #Subheader
 st.subheader('User Input parameters')
+st.write(df)
 st.write('nilai UP ', number)
 
 iris = datasets.load_iris()
