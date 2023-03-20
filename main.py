@@ -17,7 +17,6 @@ Aplikasi Prediksi Nilai UP Optimal Satker Lingkup Kanwil DJPB Sumsel
 """)
 
 #input the numbers
-kode_satker = st.number_input("berapa kode satker?")
 nilai_up = st.number_input("berapa nilai UP tahun sebelumnya?",int(data.UP.min()),int(data.UP.max()),int(data.UP.mean()))
 nilai_pagu = st.number_input("berapa nilai PAGU tahun sebelumnya?",int(data.UP.min()),int(data.UP.max()),int(data.UP.mean()))
 nilai_real = st.number_input("berapa nilai REALISASI tahun sebelumnya?",int(data.REALISASI.min()),int(data.REALISASI.max()),int(data.REALISASI.mean()))
@@ -38,7 +37,7 @@ model = xgb.XGBRegressor()
 model.fit(X_train, y_train)
 model.predict(X_test)
 errors = np.sqrt(mean_squared_error(y_test,model.predict(X_test)))
-predictions = model.predict([[SATKER, TGL_DIFF, UP, PAGU, REALISASI, PAGU52, REAL52, PAGU53, REAL53, STATUS]])[0]
+predictions = model.predict([['SATKER', TGL_DIFF, UP, PAGU, REALISASI, PAGU52, REAL52, PAGU53, REAL53, STATUS]])[0]
 
 #checking prediction 
 if st.button("Prediksi"):
