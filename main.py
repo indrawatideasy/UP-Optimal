@@ -6,7 +6,7 @@ from sklearn import datasets
 
 #Loading up the Regression model we created
 model = xgb.XGBRegressor()
-model.load_model('xgb_model.json')
+model.load_model('model_sklearn.json')
 
 #Apps Title
 st.write("""
