@@ -27,6 +27,10 @@ def user_input_features():
     nilai_pagu = st.sidebar.number_input('PAGU')
     nilai_realisasi = st.sidebar.number_input('REALISASI')
     nilai_pagu52 = st.sidebar.number_input('PAGU52')
+    nilai_real52 = st.sidebar.number_input('REAL52')
+    nilai_pagu53 = st.sidebar.number_input('PAGU53')
+    nilai_real53 = st.sidebar.number_input('REAL53')
+    nilai_status = st.sidebar.number_input('STATUS', 1, 0)
     data = {'UP': nilai_up,
             'PAGU': nilai_pagu,
             'REALISASI': nilai_realisasi,
