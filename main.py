@@ -5,8 +5,8 @@ from sklearn import datasets
 from sklearn.ensemble import RandomForestClassifier
 
 #Apps Title
-st.write("""
-# Aplikasi Sederhana Prediksi Realisasi GUP Satker Lingkup Kanwil DJPB Prov. Sumsel""")
+st.write("""# UP OPTIMAL
+Aplikasi Sederhana Prediksi Realisasi GUP Satker Lingkup Kanwil DJPB Prov. Sumsel""")
 
 #Sidebar
 st.sidebar.header('User Input Parameters')
