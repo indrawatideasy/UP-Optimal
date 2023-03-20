@@ -15,7 +15,7 @@ st.sidebar.header('Masukkan Parameter')
 st.sidebar.number_input('Insert a number')
 
 def user_input_features():
-    sepal_length = number_input('Insert a number'),
+    sepal_length = number_input('Insert a number')
     data = {'sepal_length': sepal_length,
             }
     features = pd.DataFrame(data, index=[0])
