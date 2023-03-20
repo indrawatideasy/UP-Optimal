@@ -12,8 +12,7 @@ model.load_model('model_sklearn.json')
 @st.cache
 
 #Apps Title
-st.write("""
-# UP OPTIMA
+st.write("""# UP OPTIMA
 Aplikasi Prediksi Nilai UP Optimal Satker Lingkup Kanwil DJPB Sumsel
 """)
 
