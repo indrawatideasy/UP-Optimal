@@ -29,7 +29,7 @@ X_train, X_test, y_train, y_test = train_test_split(X,y,test_size=.2, random_sta
 
 #modelling step
 #import your model
-model=XGBRegressor()
+model = xgb.XGBRegressor()
 #fitting and predict your model
 model.fit(X_train, y_train)
 model.predict(X_test)
