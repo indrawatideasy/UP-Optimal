@@ -17,7 +17,7 @@ Aplikasi Prediksi Nilai UP Optimal Satker Lingkup Kanwil DJPB Sumsel
 #input the numbers
 nilai_up = st.number_input("berapa nilai UP tahun sebelumnya?",int(data.UP.min()),int(data.UP.max()),int(data.UP.mean()))
 nilai_pagu = st.number_input("berapa nilai PAGU tahun sebelumnya?",int(data.UP.min()),int(data.UP.max()),int(data.UP.mean()))
-nilai_real = st.number_input("berapa nilai REALISASI tahun sebelumnya?",int(data.REAL.min()),int(data.REAL.max()),int(data.REAL.mean()))
+nilai_real = st.number_input("berapa nilai REALISASI tahun sebelumnya?",int(data.REALISASI.min()),int(data.REALISASI.max()),int(data.REALISASI.mean()))
 nilai_pagu52 = st.number_input("berapa nilai PAGU52 tahun sebelumnya?",int(data.PAGU52.min()),int(data.PAGU52.max()),int(data.PAGU52.mean()))
 nilai_real52 = st.number_input("berapa nilai REAL52 tahun sebelumnya?",int(data.REAL52.min()),int(data.REAL52.max()),int(data.REAL52.mean()))
 nilai_pagu53 = st.number_input("berapa nilai PAGU53 tahun sebelumnya?",int(data.PAGU53.min()),int(data.PAGU53.max()),int(data.PAGU53.mean()))
