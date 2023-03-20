@@ -20,6 +20,8 @@ nilai_pagu = st.number_input("berapa nilai PAGU tahun sebelumnya?",int(data.UP.m
 nilai_real = st.number_input("berapa nilai REALISASI tahun sebelumnya?",int(data.REALISASI.min()),int(data.REALISASI.max()),int(data.REALISASI.mean()))
 nilai_pagu52 = st.number_input("berapa nilai PAGU52 tahun sebelumnya?",int(data.PAGU52.min()),int(data.PAGU52.max()),int(data.PAGU52.mean()))
 nilai_real52 = st.number_input("berapa nilai REAL52 tahun sebelumnya?",int(data.REAL52.min()),int(data.REAL52.max()),int(data.REAL52.mean()))
+nilai_pagu53 = st.number_input("berapa nilai PAGU53 tahun sebelumnya?",int(data.PAGU53.min()),int(data.PAGU53.max()),int(data.PAGU53.mean()))
+nilai_real53 = st.number_input("berapa nilai REAL53 tahun sebelumnya?",int(data.REAL53.min()),int(data.REAL53.max()),int(data.REAL53.mean()))
 
 #splitting your data
 X = data.drop('REALGUP', axis = 1)
@@ -33,7 +35,7 @@ model = xgb.XGBRegressor()
 model.fit(X_train, y_train)
 model.predict(X_test)
 errors = np.sqrt(mean_squared_error(y_test,model.predict(X_test)))
-predictions = model.predict([[nilai_up, nilai_pagu, nilai_real, nilai_pagu52, nilai_real52]])[0]
+predictions = model.predict([[nilai_up, nilai_pagu, nilai_real, nilai_pagu52, nilai_real52, nilai_pagu53, nilai_real53]])[0]
 
 #checking prediction 
 if st.button("Prediksi"):
