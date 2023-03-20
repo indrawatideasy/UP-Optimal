@@ -24,13 +24,13 @@ st.sidebar.header('Masukkan Parameter')
 
 def user_input_features():
     nilai_up = st.sidebar.number_input('UP')
-    sepal_width = st.sidebar.number_input('Sepal width', 2.0, 4.4, 3.4)
-    petal_length = st.sidebar.number_input('Petal length', 1.0, 6.9, 1.3)
-    petal_width = st.sidebar.number_input('Petal width', 0.1, 2.5, 0.2)
+    nilai_pagu = st.sidebar.number_input('PAGU')
+    nilai_realisasi = st.sidebar.number_input('REALISASI')
+    nilai_pagu52 = st.sidebar.number_input('PAGU52')
     data = {'UP': nilai_up,
-            'sepal_width': sepal_width,
-            'petal_length': petal_length,
-            'petal_width': petal_width}
+            'PAGU': nilai_pagu,
+            'REALISASI': nilai_realisasi,
+            'PAGU52': nilai_pagu52}
     features = pd.DataFrame(data, index=[0])
     return features
     
