@@ -49,6 +49,6 @@ df = user_input_features()
 st.subheader('Hasil Masukan Parameter')
 st.write(df)
 
-#st.write(prediction)
-st.subheader('Prediction')
-st.write(iris.target_names[predictions])
+if st.button('Predkisi Realisasi GUP'):
+    realgup = predict(UP, PAGU, REALISASI, PAGU52, REAL52, PAGU53, REAL53, STATUS)
+    st.success(f'Prediksi nilai GUP yaitu sebesar ${realgup[0]:.2f} USD')
