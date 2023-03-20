@@ -11,23 +11,15 @@ model.load_model('model_sklearn.json')
 #Caching the model for faster loading
 @st.cache
 
-#Apps Title
-st.write("""# UP OPTIMA
-Aplikasi Prediksi Nilai UP Optimal Satker Lingkup Kanwil DJPB Sumsel
-""")
-
-#Sidebar
-st.sidebar.header('Masukkan Parameter')
-
 def user_input_features():
-    nilai_up = st.sidebar.number_input('UP')
-    nilai_pagu = st.sidebar.number_input('PAGU')
-    nilai_realisasi = st.sidebar.number_input('REALISASI')
-    nilai_pagu52 = st.sidebar.number_input('PAGU52')
-    nilai_real52 = st.sidebar.number_input('REAL52')
-    nilai_pagu53 = st.sidebar.number_input('PAGU53')
-    nilai_real53 = st.sidebar.number_input('REAL53')
-    nilai_status = st.sidebar.number_input('STATUS', 1, 0)
+    nilai_up = st.number_input('UP')
+    nilai_pagu = st.number_input('PAGU')
+    nilai_realisasi = st.number_input('REALISASI')
+    nilai_pagu52 = st.number_input('PAGU52')
+    nilai_real52 = st.number_input('REAL52')
+    nilai_pagu53 = st.number_input('PAGU53')
+    nilai_real53 = st.number_input('REAL53')
+    nilai_status = st.number_input('STATUS', 1, 0)
     data = {'UP': nilai_up,
             'PAGU': nilai_pagu,
             'REALISASI': nilai_realisasi,
@@ -41,6 +33,12 @@ def user_input_features():
     
 #User Input Parameter
 df = user_input_features()
+
+#Apps Title
+st.write("""
+# UP OPTIMA
+Aplikasi Prediksi Nilai UP Optimal Satker Lingkup Kanwil DJPB Sumsel
+""")
 
 #Subheader
 st.subheader('Hasil Masukan Parameter')
