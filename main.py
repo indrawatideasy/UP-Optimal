@@ -11,11 +11,6 @@ model.load_model('model_sklearn.json')
 #Caching the model for faster loading
 @st.cache
 
-#Now we do the predictions for cloned models and average them
-def predict(self, X):
-    predictions = np.column_stack([model.predict(X) for model in self.models_])
-    return np.mean(predictions, axis=1)
-
 #Apps Title
 st.write("""
 # UP OPTIMA
