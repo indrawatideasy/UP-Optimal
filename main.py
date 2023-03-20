@@ -6,12 +6,12 @@ from sklearn.ensemble import RandomForestClassifier
 
 #Apps Title
 st.write("""
-# Simple Iris Flower Prediction App
-This app predicts the **Iris flower** type!
+# UP OPTIMA
+Aplikasi Prediksi Nilai UP Optimal Satker Lingkup Kanwil DJPB Sumsel
 """)
 
 #Sidebar
-st.sidebar.header('User Input Parameters')
+st.sidebar.header('Masukkan Parameter')
 
 def user_input_features():
     sepal_length = st.sidebar.slider('Sepal length', 4.3, 7.9, 5.4)
@@ -29,7 +29,7 @@ def user_input_features():
 df = user_input_features()
 
 #Subheader
-st.subheader('User Input parameters')
+st.subheader('Hasil Masukan Parameter')
 st.write(df)
 
 iris = datasets.load_iris()
@@ -45,7 +45,7 @@ prediction_proba = clf.predict_proba(df)
 st.subheader('Class labels and their corresponding index number')
 st.write(iris.target_names)
 
-st.subheader('Prediction')
+st.subheader('Prediksi Realisasi GUP')
 st.write(iris.target_names[prediction])
 #st.write(prediction)
 
