@@ -49,6 +49,6 @@ df = user_input_features()
 st.subheader('Hasil Masukan Parameter')
 st.write(df)
 
-if st.button('Predkisi Realisasi GUP'):
+if st.button('Prediksi Realisasi GUP'):
     realgup = predict(UP, PAGU, REALISASI, PAGU52, REAL52, PAGU53, REAL53, STATUS)
-    st.success(f'Prediksi nilai GUP yaitu sebesar ${realgup[0]:.2f} USD')
+    st.success(f'Prediksi nilai GUP yaitu sebesar Rp{realgup[0]:.2f} ')
