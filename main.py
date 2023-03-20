@@ -4,36 +4,6 @@ import pandas as pd
 import xgboost as xgb
 from sklearn import datasets
 
-#Loading up the Regression model we created
-model = xgb.XGBRegressor()
-model.load_model('model_sklearn.json')
-
-#Caching the model for faster loading
-@st.cache
-
-def user_input_features():
-    nilai_up = st.number_input('UP')
-    nilai_pagu = st.number_input('PAGU')
-    nilai_realisasi = st.number_input('REALISASI')
-    nilai_pagu52 = st.number_input('PAGU52')
-    nilai_real52 = st.number_input('REAL52')
-    nilai_pagu53 = st.number_input('PAGU53')
-    nilai_real53 = st.number_input('REAL53')
-    nilai_status = st.number_input('STATUS', 1, 0)
-    data = {'UP': nilai_up,
-            'PAGU': nilai_pagu,
-            'REALISASI': nilai_realisasi,
-            'PAGU52': nilai_pagu52,
-            'REAL52': nilai_real52,
-            'PAGU53': nilai_pagu53,
-            'REAL53': nilai_real53,
-            'STATUS': nilai_status}
-    features = pd.DataFrame(data, index=[0])
-    return features
-    
-#User Input Parameter
-df = user_input_features()
-
 #Apps Title
 st.write("""
 # UP OPTIMA
@@ -41,8 +11,7 @@ Aplikasi Prediksi Nilai UP Optimal Satker Lingkup Kanwil DJPB Sumsel
 """)
 
 #Subheader
-st.subheader('Hasil Masukan Parameter')
-st.write(df)
+
 
 if st.button('Prediksi Realisasi GUP'):
     realgup = predict(UP, PAGU, REALISASI, PAGU52, REAL52, PAGU53, REAL53, STATUS)
