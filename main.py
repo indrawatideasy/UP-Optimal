@@ -29,7 +29,7 @@ df = user_input_features()
 #Subheader
 st.subheader('User Input parameters')
 st.write(df)
-st.write('nilai UP ', number)
+st.write('nilai UP ', nilai_up)
 
 iris = datasets.load_iris()
 X = iris.data
