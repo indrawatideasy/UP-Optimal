@@ -4,3 +4,4 @@ streamlit==0.86.0
 openpyxl==3.0.6
 scikit-learn
 xgboost
+numpy==1.18.1
