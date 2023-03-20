@@ -5,6 +5,7 @@ import pandas as pd
 import xgboost as xgb
 from sklearn import datasets
 from sklearn.model_selection import train_test_split
+from sklearn.metrics import mean_squared_error
 
 #import the data
 data = pd.read_csv("https://raw.githubusercontent.com/indrawatideasy/profil-pemda/main/pengelolaangup.csv")
