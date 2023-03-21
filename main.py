@@ -31,7 +31,7 @@ PAGU53 = st.number_input("Pagu Belanja Modal", 1, 100000000000)
 REAL53 = st.number_input("Realisasi Belanja Modal", 1, 100000000000)
 
 feature_list = [UP, PAGU, REALISASI, PAGU52, REAL52, PAGU53, REAL53]
-single_pred = np.array(feature_list).reshape(1,-1)
+single_pred = np.array(feature_list)
 
 #checking prediction 
 if st.button("Prediksi"):
