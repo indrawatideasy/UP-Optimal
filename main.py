@@ -14,8 +14,7 @@ data = pd.read_csv("https://raw.githubusercontent.com/indrawatideasy/profil-pemd
 def load_model(modelfile):
 	loaded_model = pickle.load(open(modelfile, 'rb'))
 	return loaded_model
-	return loaded_model
-
+	
 #Apps Title
 st.write("""
 # UP OPTIMAL
