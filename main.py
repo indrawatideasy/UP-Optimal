@@ -11,6 +11,10 @@ from sklearn.metrics import mean_squared_error
 #import the data
 data = pd.read_csv("https://raw.githubusercontent.com/indrawatideasy/profil-pemda/main/pengelolaangup.csv")
 
+def load_model(modelfile):
+	loaded_model = pickle.load(open(modelfile, 'rb'))
+	return loaded_model
+
 #Apps Title
 st.write("""
 # UP OPTIMAL
