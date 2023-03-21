@@ -16,7 +16,7 @@ def main():
     # title
     html_temp = """
     <div>
-    <h1 style="color:MEDIUMSEAGREEN;text-align:left;"> Crop Recommendation  🌱 </h1>
+    <h1 style="color:MEDIUMSEAGREEN;text-align:left;"> UP OPTIMA </h1>
     </div>
     """
     st.markdown(html_temp, unsafe_allow_html=True)
@@ -36,16 +36,16 @@ def main():
 
 
     with col2:
-        st.subheader(" Find out the most suitable crop to grow in your farm 👨‍🌾")
-        N = st.number_input("Nitrogen", 1,10000)
-        P = st.number_input("Phosporus", 1,10000)
-        K = st.number_input("Potassium", 1,10000)
-        temp = st.number_input("Temperature",0.0,100000.0)
-        humidity = st.number_input("Humidity in %", 0.0,100000.0)
-        ph = st.number_input("Ph", 0.0,100000.0)
-        rainfall = st.number_input("Rainfall in mm",0.0,100000.0)
-
-        feature_list = [N, P, K, temp, humidity, ph, rainfall]
+        st.subheader(" Nilai UP Optima Satker Lingkup Kanwil DJPB Sumsel")
+        UP = st.number_input("Uang Persediaan", 1,100000000000)
+        PAGU = st.number_input("Pagu", 1,100000000000)
+	REALISASI = st.number_input("Nilai Realisasi", 1,100000000000)
+	PAGU52 = st.number_input("Pagu Belanja Barang", 1,100000000000)
+	REAL52 = st.number_input("Realisasi Belanja Barang", 1,100000000000)
+	PAGU53 = st.number_input("Realisasi Belanja Modal", 1,100000000000)
+	REAL53 = st.number_input("Realisasi Belanja Modal", 1,100000000000)
+	
+        feature_list = [UP, PAGU, REALISASI, PAGU52, REAL52, PAGU53, REAL53]
         single_pred = np.array(feature_list).reshape(1,-1)
         
         if st.button('Predict'):
