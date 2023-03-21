@@ -36,7 +36,7 @@ model = xgb.XGBRegressor()
 #fitting and predict your model
 model.fit(X_train, y_train)
 y_pred = model.predict(X_test)
-predictions = (round(value) for value in y_pred])
+predictions = (round(value) for value in y_pred)
 
 #checking prediction 
 if st.button("Prediksi"):
