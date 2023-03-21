@@ -6,7 +6,7 @@ import pickle
 import warnings
 
 
-st.beta_set_page_config(page_title="Crop Recommender", page_icon="🌿", layout='centered', initial_sidebar_state="collapsed")
+st.beta_set_page_config(page_title="UP OPTIMA", layout='centered', initial_sidebar_state="collapsed")
 
 def load_model(modelfile):
 	loaded_model = pickle.load(open(modelfile, 'rb'))
