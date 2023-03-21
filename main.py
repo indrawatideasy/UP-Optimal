@@ -40,4 +40,4 @@ predictions = (round(value) for value in y_pred)
 
 #checking prediction 
 if st.button("Prediksi"):
-    st.text("Prediksi Realisasi GUP yaitu Rp {}.".format(int(predictions)))
+    st.text("Prediksi Realisasi GUP yaitu Rp {}.".format(float('predictions')))
