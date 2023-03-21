@@ -17,7 +17,8 @@ Aplikasi Prediksi Nilai UP Optimal Satker Lingkup Kanwil DJPB Sumsel
 """)
 
 #input the numbers
-kode_satker = st.number_input("berapa kode satkernya?",int(data.SATKER.min()),int(data.SATKER.max()),int(data.SATKER.mean()))
+UP = st.number_input("Nilai UP", 1, 100000000000)
+PAGU = st.number_input("Pagu", 1, 100000000000)
 
 #splitting your data
 X = data.drop('REALGUP', axis = 1)
