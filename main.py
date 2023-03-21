@@ -11,8 +11,9 @@ from sklearn.metrics import mean_squared_error
 #import the data
 data = pd.read_csv("https://raw.githubusercontent.com/indrawatideasy/profil-pemda/main/pengelolaangup.csv")
 
-def load_model:
-	loaded_model = load_model('model_baggingclf.pkl')
+def load_model(modelfile):
+	loaded_model = pickle.load(open(modelfile, 'rb'))
+	return loaded_model
 	return loaded_model
 
 #Apps Title
@@ -35,6 +36,7 @@ single_pred = np.array(feature_list)
 
 #checking prediction 
 if st.button("Prediksi"):
-    prediction = loaded_model.predict(single_pred)
-    st.success(f"{prediction.item().title()}")
-             
+	
+	loaded_model = load_model('model_baggingclf.pkl')
+	prediction = loaded_model.predict(single_pred)
+	st.success(f"{prediction.item().title()}")
