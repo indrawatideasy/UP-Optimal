@@ -4,4 +4,7 @@ streamlit==0.86.0
 openpyxl==3.0.6
 scikit-learn
 xgboost
-numpy==1.23.3
+numpy
+seaborn==0.10.1
+pandas_profiling==2.3.0
+matplotlib==3.3.0
