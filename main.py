@@ -3,6 +3,7 @@ import streamlit as st
 import numpy as np
 import pandas as pd
 import xgboost as xgb
+import pickle
 from sklearn import datasets
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import mean_squared_error
@@ -25,18 +26,12 @@ REAL52 = st.number_input("Realisasi Belanja Barang", 1, 100000000000)
 PAGU53 = st.number_input("Pagu Belanja Modal", 1, 100000000000)
 REAL53 = st.number_input("Realisasi Belanja Modal", 1, 100000000000)
 
-#splitting your data
-X = data.drop('REALGUP', axis = 1)
-y = data['REALGUP']
-X_train, X_test, y_train, y_test = train_test_split(X,y,test_size=.2, random_state=45)
-
-#modelling step
-#import your model
-model = xgb.XGBRegressor()
-#fitting and predict your model
-model.fit(X_train, y_train)
-y_pred = model.predict(X)
+feature_list = [UP, PAGU, REALISASI, PAGU52, REAL52, PAGU53, REAL53]
+single_pred = np.array(feature_list).reshape(1,-1)
 
 #checking prediction 
 if st.button("Prediksi"):
-    st.text("Prediksi Realisasi GUP yaitu Rp {}. ".format(int(y_pred[0])))
+    loaded_model = load_model('model_baggingclf.pkl')
+    prediction = loaded_model.predict(single_pred)
+    st.success(f"{prediction.item().title()})
+             
