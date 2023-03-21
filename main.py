@@ -39,4 +39,4 @@ y_pred = model.predict(X_test)
 
 #checking prediction 
 if st.button("Prediksi"):
-    st.text("Prediksi Realisasi GUP yaitu Rp {}.".format(y.pred))
+    st.text("Prediksi Realisasi GUP yaitu Rp {}.".format(y_pred))
