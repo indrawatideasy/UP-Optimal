@@ -37,13 +37,13 @@ def main():
 
     with col2:
         st.subheader(" Nilai UP Optima Satker Lingkup Kanwil DJPB Sumsel")
-        UP = st.number_input("Uang Persediaan", 1,100000000000)
-        PAGU = st.number_input("Pagu", 1,100000000000)
-	REALISASI = st.number_input("Nilai Realisasi", 1,100000000000)
-	PAGU52 = st.number_input("Pagu Belanja Barang", 1,100000000000)
+        UP = st.number_input("Uang Persediaan", 1, 100000000000)
+        PAGU = st.number_input("Pagu", 1, 100000000000)
+	REALISASI = st.number_input("Nilai Realisasi", 1, 100000000000)
+	PAGU52 = st.number_input("Pagu Belanja Barang", 1, 100000000000)
 	REAL52 = st.number_input("Realisasi Belanja Barang", 1,100000000000)
-	PAGU53 = st.number_input("Realisasi Belanja Modal", 1,100000000000)
-	REAL53 = st.number_input("Realisasi Belanja Modal", 1,100000000000)
+	PAGU53 = st.number_input("Realisasi Belanja Modal", 1, 100000000000)
+	REAL53 = st.number_input("Realisasi Belanja Modal", 1, 100000000000)
 	
         feature_list = [UP, PAGU, REALISASI, PAGU52, REAL52, PAGU53, REAL53]
         single_pred = np.array(feature_list).reshape(1,-1)
