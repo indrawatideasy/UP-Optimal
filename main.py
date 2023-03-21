@@ -36,5 +36,6 @@ single_pred = np.array(feature_list)
 #checking prediction 
 if st.button("Prediksi"):
 	
+	loaded_model = load_model('model.pkl')
 	prediction = loaded_model.predict(single_pred)
 	st.success(f"{prediction.item().title()}")
