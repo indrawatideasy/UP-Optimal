@@ -29,9 +29,8 @@ X_train, X_test, y_train, y_test = train_test_split(X,y,test_size=.2, random_sta
 model = xgb.XGBRegressor()
 #fitting and predict your model
 model.fit(X_train, y_train)
-y_pred = model.predict(X_test)
-predictions = [round(value) for value in y_pred]
+y_pred = model.predict(X)
 
 #checking prediction 
 if st.button("Prediksi"):
-    st.text("Prediksi Realisasi GUP yaitu Rp {}. ".format(int('predictions')))
+    st.text("Prediksi Realisasi GUP yaitu Rp {}. ".format(int(y_pred[0])))
