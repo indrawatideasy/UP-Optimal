@@ -33,5 +33,5 @@ single_pred = np.array(feature_list).reshape(1,-1)
 if st.button("Prediksi"):
     loaded_model = load_model('model_baggingclf.pkl')
     prediction = loaded_model.predict(single_pred)
-    st.success(f"{prediction.item().title()})
+    st.success(f"{prediction.item().title()}")
              
