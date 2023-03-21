@@ -11,8 +11,8 @@ from sklearn.metrics import mean_squared_error
 #import the data
 data = pd.read_csv("https://raw.githubusercontent.com/indrawatideasy/profil-pemda/main/pengelolaangup.csv")
 
-def load_model('model_baggingclf.pkl'):
-	loaded_model = pickle.load('model_baggingclf.pkl', 'rb')
+def load_model(model_baggingclf):
+	loaded_model = pickle.load(model_baggingclf, 'rb')
 	return loaded_model
 	
 #Apps Title
