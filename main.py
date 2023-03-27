@@ -12,7 +12,7 @@ df = pd.read_csv("pengelolaangup.csv")
 model = joblib.load('pred_realgup.pkl')
 def predict(UP, PAGU, REALISASI, PAGU52, REAL52, PAGU53, REAL53):
 	prediction=model.predict([[UP, PAGU, REALISASI, PAGU52, REAL52, PAGU53, REAL53]])
-    return prediction
+	return prediction
 
 #Apps Title
 st.write("""
