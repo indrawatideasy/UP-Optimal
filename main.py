@@ -25,6 +25,8 @@ df_pred['PAGU52'] = st.number_input("Nilai PAGU52", 1, 100000000000)
 df_pred['REAL52'] = st.number_input("Nilai REAL52", 1, 100000000000)
 df_pred['PAGU53'] = st.number_input("Nilai PAGU53", 1, 100000000000)
 df_pred['REAL53'] = st.number_input("Nilai REAL53", 1, 100000000000)
+def transform(data): 
+	return df_pred.apply(transform)
 
 #checking prediction 
 if st.button("Prediksi"):
