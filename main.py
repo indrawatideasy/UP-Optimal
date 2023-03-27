@@ -9,6 +9,10 @@ from sklearn.metrics import mean_squared_error
 
 #import the data
 df = pd.read_csv("pengelolaangup.csv")
+model = joblib.load('pred_realgup.pkl')
+def predict(UP, PAGU, REALISASI, PAGU52, REAL52, PAGU53, REAL53):
+	prediction=model.predict([[UP, PAGU, REALISASI, PAGU52, REAL52, PAGU53, REAL53]])
+    return prediction
 
 #Apps Title
 st.write("""
@@ -25,11 +29,8 @@ df_pred['PAGU52'] = st.number_input("Nilai PAGU52", 1, 100000000000)
 df_pred['REAL52'] = st.number_input("Nilai REAL52", 1, 100000000000)
 df_pred['PAGU53'] = st.number_input("Nilai PAGU53", 1, 100000000000)
 df_pred['REAL53'] = st.number_input("Nilai REAL53", 1, 100000000000)
-def transform(data): 
-	return df_pred.apply(transform)
 
 #checking prediction 
-if st.button("Prediksi"):
-	model = joblib.load('pred_realgup.pkl')
-	prediction = model.predict(df_pred)
-	st.success(f"{prediction.item().title()}")
+if st.button("Predict"):
+        result=predict(UP, PAGU, REALISASI, PAGU52, REAL52, PAGU53, REAL53)
+    st.success("Prediksi realisasi GUP yaitu{}".format(result))
