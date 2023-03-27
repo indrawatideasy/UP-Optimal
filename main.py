@@ -9,7 +9,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import mean_squared_error
 
 #import the data
-data = pd.read_csv("https://raw.githubusercontent.com/indrawatideasy/profil-pemda/main/pengelolaangup.csv")
+data = pd.read_csv("pengelolaangup.csv")
 
 def load_model(model_baggingclf):
 	loaded_model = pickle.load(model_baggingclf, 'rb')
