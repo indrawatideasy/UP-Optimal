@@ -7,11 +7,8 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import mean_squared_error
 
 #import the data
-data = pd.read_csv("pengelolaangup.csv")
+df = pd.read_csv("pengelolaangup.csv")
 
-#import model
-
-	
 #Apps Title
 st.write("""
 # UP OPTIMAL
