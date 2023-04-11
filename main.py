@@ -10,8 +10,8 @@ from sklearn.metrics import mean_squared_error
 #import the data
 df = pd.read_csv("pengelolaangup.csv")
 model = joblib.load('pred_realgup.pkl')
-def predict(UP, PAGU, REALISASI, PAGU52, REAL52, PAGU53, REAL53):
-	prediction=model.predict([[UP, PAGU, REALISASI, PAGU52, REAL52, PAGU53, REAL53]])
+def predict(UP, PAGU, REALISASI, PAGU52, REAL52):
+	prediction=model.predict([[UP, PAGU, REALISASI, PAGU52, REAL52]])
 	return prediction
 
 #Apps Title
