@@ -22,7 +22,7 @@ Aplikasi Prediksi Nilai UP Optimal Satker Lingkup Kanwil DJPB Sumsel
 
 #input the numbers
 df_pred = pd.DataFrame(columns= ['UP', 'PAGU', 'REALISASI', 'PAGU52', 'REAL52'])
-df_pred['UP'] = st.number_input("Nilai UP", 1, 100000000000)
+df_pred['UP'] = st.number_input("Nilai UP", float(1), float(100000000000))
 df_pred['PAGU'] = st.number_input("Nilai PAGU", 1, 100000000000)
 df_pred['REALISASI'] = st.number_input("Nilai REALISASI", 1, 100000000000)
 df_pred['PAGU52'] = st.number_input("Nilai PAGU52", 1, 100000000000)
