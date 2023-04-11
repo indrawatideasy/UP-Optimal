@@ -27,10 +27,8 @@ df_pred['PAGU'] = st.number_input("Nilai PAGU", 1, 100000000000)
 df_pred['REALISASI'] = st.number_input("Nilai REALISASI", 1, 100000000000)
 df_pred['PAGU52'] = st.number_input("Nilai PAGU52", 1, 100000000000)
 df_pred['REAL52'] = st.number_input("Nilai REAL52", 1, 100000000000)
-df_pred['PAGU53'] = st.number_input("Nilai PAGU53", 1, 100000000000)
-df_pred['REAL53'] = st.number_input("Nilai REAL53", 1, 100000000000)
 
 #checking prediction 
 if st.button("Predict"):
-	result=predict('UP', 'PAGU', 'REALISASI', 'PAGU52', 'REAL52', 'PAGU53', 'REAL53')
+	result=predict('UP', 'PAGU', 'REALISASI', 'PAGU52', 'REAL52')
 	st.success("Prediksi realisasi GUP yaitu{}.".format(result))
