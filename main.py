@@ -9,8 +9,8 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import mean_squared_error
 
 #Loading up the Regression model we created
-model = xgb.XGBRegressor()
-model.load_model('xgb_model.json')
+df = pd.read_csv("pengelolaangup.csv")
+model = joblib.load('pred_realgup.pkl')
 
 #Caching the model for faster loading
 @st.cache
