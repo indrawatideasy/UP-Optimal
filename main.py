@@ -38,4 +38,4 @@ REAL53 = st.number_input('REAL53:', min_value=1.0, max_value=10000000000.0, valu
 #checking prediction 
 if st.button('Prediksi'):
     realgup = predict(UP, PAGU, REALISASI, PAGU52, REAL52, PAGU53, REAL53)
-    st.success(f'Prediksi realisasi GUP yaitu ${realgup[0]:.2f} IDR')
+    st.success(f'Prediksi realisasi GUP yaitu Rp{realgup[0]:.2f} ')
