@@ -16,8 +16,8 @@ model = joblib.load('pred_realgup.pkl')
 @st.cache
 
 # Define the prediction function
-def predict(UP, PAGU, REALISASI, PAGU52, REAL52):
-	prediction = model.predict(pd.DataFrame([[UP, PAGU, REALISASI, PAGU52, REAL52]], columns=['UP', 'PAGU', 'REALISASI', 'PAGU52', 'REAL52']))
+def predict(UP, PAGU, REALISASI, PAGU52, REAL52, PAGU53, REAL53):
+	prediction = model.predict(pd.DataFrame([[UP, PAGU, REALISASI, PAGU52, REAL52, PAGU53, REAL53]], columns=['UP', 'PAGU', 'REALISASI', 'PAGU52', 'REAL52', 'PAGU53', 'REAL53']))
 	return prediction
 
 #Apps Title
@@ -32,8 +32,10 @@ PAGU = st.number_input('PAGU:', min_value=1.0, max_value=10000000000.0, value=1.
 REALISASI = st.number_input('REALISASI:', min_value=1.0, max_value=10000000000.0, value=1.0)
 PAGU52 = st.number_input('PAGU52:', min_value=1.0, max_value=10000000000.0, value=1.0)
 REAL52 = st.number_input('REAL52:', min_value=1.0, max_value=10000000000.0, value=1.0)
+PAGU53 = st.number_input('PAGU53:', min_value=1.0, max_value=10000000000.0, value=1.0)
+REAL53 = st.number_input('REAL53:', min_value=1.0, max_value=10000000000.0, value=1.0)
 
 #checking prediction 
 if st.button('Prediksi'):
-    realgup = predict(UP, PAGU, REALISASI, PAGU52, REAL52)
-    st.success(f'The predicted price of the diamond is ${price[0]:.2f} USD')
+    realgup = predict(UP, PAGU, REALISASI, PAGU52, REAL52, PAGU53, REAL53)
+    st.success(f'Prediksi realisasi GUP yaitu ${price[0]:.2f} IDR')
