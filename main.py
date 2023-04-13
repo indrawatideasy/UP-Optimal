@@ -29,6 +29,6 @@ df_pred['PAGU52'] = st.number_input("Nilai PAGU52", float(1), float(100000000000
 df_pred['REAL52'] = st.number_input("Nilai REAL52", float(1), float(100000000000))
 
 #checking prediction 
-if st.button("Predict"):
+if st.button("Prediksi"):
 	result=predict('UP', 'PAGU', 'REALISASI', 'PAGU52', 'REAL52')
 	st.success("Prediksi realisasi GUP yaitu{}.".format(result))
